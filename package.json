@@ -1,0 +1,22 @@
+{
+  "dependencies": {
+    "react-router-dom": "^6.22.0"
+  },
+  "name": "snackify",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "start": "cd backend && npm start",
+    "prebuild": "cd backend && npm install & cd frontend && npm install",
+    "build": "cd frontend && npm run build",
+    "postbuild": "mv -f frontend/build backend/src/public"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "engines": {
+    "node": ">=18 <19"
+  }
+}

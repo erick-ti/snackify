@@ -1,0 +1,86 @@
+.list{  /* start with ul css (unordered list) */
+    display: flex;
+    justify-content: center; /* center horizontally */
+    align-items: center; /* center vertically */
+    flex-wrap: wrap;
+    list-style-type: none; /* removes bullet point of the ul */
+    padding: 0; /* removes default padding from ul */
+}
+
+.list li a {  /* link css */
+    height: 22.5rem; /* set constant height */
+    width: 20rem; /* set constant width */
+    border: 1px solid whitesmoke;
+    margin: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    color: #e72929;
+}
+
+.image {
+    object-fit: cover; /* keep aspect ratio */
+    height: 14.5rem; /* set constant height for images */
+    width: 20rem; /* set constant width for images */
+    border-radius: .3rem; /* border rounding for images */
+}
+
+.content {
+    margin-top: 0.3rem;
+    padding: 0.5rem 1rem;
+    position: relative;
+    height: 7rem;
+}
+
+.favorite { /* heart rating css */
+    position: absolute;
+    top: 0.5rem;
+    right: 1rem;
+    font-size: 1.2rem;
+}
+
+.favorite.not {
+    color:grey;  /* grey heart if no favorite */
+}
+
+.stars {
+    margin: 0.5rem 0;
+}
+
+.product_item_footer{  /* move cook time to right side */
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.origins span{  /* css for food origin tags */
+    border-radius: 2rem;
+    background-color: whitesmoke;
+    display: inline-block;
+    font-size: 0.8rem;
+    color: grey;
+    margin-right: 0.3rem;
+    padding: 0 0.5rem;
+    margin-top: 0.2rem;
+}
+
+.origins {
+    flex: 9;
+}
+
+.cook_time {
+    font-size: 0.9rem;
+    flex: 3;
+    text-align: right;
+}
+
+.price {
+    position: absolute;
+    bottom: 0;
+    left: 0.9rem;
+    background-color: white;
+    padding: 0.3rem 100% 0 0; /* put price at bottom left */
+    color: #414141;
+    margin-top: 0.7rem;
+    font-size: 1.1rem;
+}

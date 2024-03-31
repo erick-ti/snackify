@@ -1,0 +1,4 @@
+.rating{ /* when in small screen, the star rating will not go down */
+    display: flex;
+    flex-wrap: nowrap;
+}

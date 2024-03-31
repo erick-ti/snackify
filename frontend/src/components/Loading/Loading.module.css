@@ -1,0 +1,29 @@
+.container {
+    position: fixed; /* won't move up or down when scrolling */
+    width: 100%;
+    height: 100%;
+    background-color: #ffffffea; /* for background transparency */
+    z-index: 10000; /* to make sure its on top layer of everything */
+    top: 0;
+    left: 0;
+}
+
+.items {
+    display: flex;
+    flex-direction: column; /* show top to bottom (image and text) */
+    justify-content: center;
+    align-items: center;
+    height: 80%;
+    width: 100;
+}
+
+/* creates a ground for bouncing ball */
+.container img {
+    border-bottom: 10px solid brown;
+}
+
+/* changes loading text to brown */
+.container h1 {
+    color: brown;
+    text-transform: lowercase;
+}
