@@ -2,7 +2,12 @@ import React, { useEffect, useState } from 'react'
 import classes from './search.module.css';
 import { useNavigate, useParams } from 'react-router-dom';
 
-export default function Search() {
+Search.defaultProps = {
+    searchRoute: '/search/',
+    defaultRoute: '/',
+  };
+
+export default function Search({searchRoute, defaultRoute, margin}) {
     // for holding the search term, default value is an empty string
     const [term, setTerm] = useState(''); // make sure to enter in 'useState'
     // for changing route using reactor dom
@@ -19,12 +24,12 @@ export default function Search() {
     then change address to /search/'term', 
     otherwise show all items with '/'. */
     const search = async () => {
-        term ? navigate('/search/' + term) : navigate('/');
+        term ? navigate(searchRoute + term) : navigate(defaultRoute);
     };
 
     // returns search box and search button
     return (
-    <div className={classes.container}>
+    <div className={classes.container} style={{margin}}>
     <input
         type="text"
         placeholder="Search Snackify!"
