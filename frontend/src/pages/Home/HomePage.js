@@ -1,5 +1,5 @@
 import React, { useEffect, useReducer } from 'react'
-import { getAll, getAllByTag, getAllTags, search } from '../../services/foodServices';
+import { getAll, getAllByTag, getAllTags, search } from '../../services/foodService';
 import Thumbnails from '../../components/Thumbnails/Thumbnails';
 import { useParams } from 'react-router-dom';
 import Search from '../../components/Search/Search';
@@ -30,7 +30,7 @@ export default function HomePage() {
     getAllTags().then(tags => dispatch({ type: 'TAGS_LOADED', payload: tags }));
 
     /* checks if searchTerm is available using searchTerm function from 
-    foodServices.js otherwise it uses default getAll() function for getting
+    foodService.js otherwise it uses default getAll() function for getting
     all the foods */
     const loadFoods = tag
     // if tag is available, get all foods with tag

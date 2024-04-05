@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import classes from './foodPage.module.css';
 import { useNavigate, useParams } from 'react-router-dom';
-import { getById } from '../../services/foodServices';
+import { getById } from '../../services/foodService';
 import StarRating from '../../components/StarRating/StarRating';
 import Tags from '../../components/Tags/Tags';
 import Price from '../../components/Price/Price';

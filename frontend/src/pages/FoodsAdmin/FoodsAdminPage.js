@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import classes from './foodsAdminPage.module.css';
 import { Link, useParams } from 'react-router-dom';
-import { deleteById, getAll, search } from '../../services/foodServices';
+import { deleteById, getAll, search } from '../../services/foodService';
 import NotFound from '../../components/NotFound/NotFound';
 import Title from '../../components/Title/Title';
 import Search from '../../components/Search/Search';

@@ -4,7 +4,8 @@ export const setLoadingInterceptor = ({ showLoading, hideLoading }) => {
     // for setting up interceptor request that goes to server
     axios.interceptors.request.use(
         req => { // onResolve
-            showLoading();
+            // if sending data that is not FormData, show loading
+            if (!(req.data instanceof FormData)) showLoading();
             return req;
         },
         error => { // if error, hide loading screen
